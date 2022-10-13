@@ -1,0 +1,24 @@
+{
+  "name": "bounceless-js",
+  "version": "0.0.1",
+  "description": "api for bounceless.io",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlehLeo/bounceless-js.git"
+  },
+  "author": "OlehLeo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OlehLeo/bounceless-js/issues"
+  },
+  "homepage": "https://github.com/OlehLeo/bounceless-js#readme",
+  "dependencies": {
+    "axios": "^1.1.2"
+  }
+}
