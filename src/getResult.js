@@ -6,7 +6,7 @@ export const getResult = async (options, secret) => {
   if (!options || typeof options !== 'object') throw new Error('First argument must be an options object');
   if (!secret || typeof secret !== 'string') throw new Error('No or incorrect secret');
 
-  const { fileId = null, parse = false, okOnly = false } = options;
+  const { fileId = null, parse = false } = options;
   if (!fileId) throw new Error('File id is required');
 
   const endpoint = '/getApiFileInfo';
@@ -26,7 +26,7 @@ export const getResult = async (options, secret) => {
     const linkToResultFile = (() => {
       const splittedResult = data.split('|');
       const lastElementIndex = splittedResult.length - 1;
-      return okOnly ? splittedResult[lastElementIndex - 1] : splittedResult[lastElementIndex];
+      return splittedResult[lastElementIndex];
     })();
     if (!parse) return linkToResultFile;
 
